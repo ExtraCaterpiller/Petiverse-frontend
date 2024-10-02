@@ -41,7 +41,7 @@ export default function Train() {
         const fetchGameData = async () => {
             const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/nft/gamedata/${tokenId}`);
             const data = await response.json();
-            console.log("gamedata: ", data)
+
             if (!data.success) {
                 toast.error(data.message)
                 setTargetWord("-----")
