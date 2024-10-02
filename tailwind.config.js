@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'custom-pattern': "url('/blur-back3.jpg')",
+      }
     },
   },
   plugins: [],

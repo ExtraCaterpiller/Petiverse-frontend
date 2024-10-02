@@ -1,5 +1,18 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+{/* Show previous selection and corresponding letters */}
+            {/* <div className="mt-4">
+                <h3>Previous Points and Letters:</h3>
+                <div className="flex gap-4">
+                    {Object.keys(words).map((point) => (
+                        <div key={point} className="mr-2 p-2 bg-yellow-300 rounded">
+                            <p>{point}</p>
+                            <p>{words[point]}</p>
+                        </div>
+                    ))}
+                </div>
+            </div> */}
+
 ## Getting Started
 
 First, run the development server:
