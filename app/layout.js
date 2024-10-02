@@ -14,8 +14,6 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-
-
 export const metadata = {
   title: "Petiverse",
   description: "Petiverse",
@@ -25,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-cover bg-center h-screen bg-custom-pattern`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-cover bg-center h-screen`}
       >
         <Provider>
           <Header />

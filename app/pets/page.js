@@ -45,7 +45,7 @@ export default function Pets() {
                     <div className="grid grid-cols-4 gap-4 p-3 mt-5">
                         {data.nfts.map((nft) => (
                             <div onClick={() => router.push(`/${nft.tokenId}`)} >
-                                <NFTCard tokenId={nft.tokenId} imageURI={nft.image} petType={nft.petType} name={nft.name} key={nft.tokenId} height={96} width={64} />
+                                <NFTCard tokenId={nft.tokenId} imageURI={nft.image} petType={nft.petType} key={nft.tokenId} />
                             </div>
                         ))}
                     </div>

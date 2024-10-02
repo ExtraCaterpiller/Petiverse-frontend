@@ -7,7 +7,7 @@ const fredoka = Fredoka({
     subsets: ["latin"]
 })
 
-export default function NFTCard({ tokenId, imageURI, petType, name, height, width }) {
+export default function NFTCard({ tokenId, imageURI, petType }) {
     const [imageURIURl, setImageURIURl] = useState(null)
 
     useEffect(() => {
@@ -23,18 +23,17 @@ export default function NFTCard({ tokenId, imageURI, petType, name, height, widt
             <div>
                 {imageURIURl ? (
                     <div
-                        className="bg-slate-900 rounded-lg cursor-pointer hover:scale-105 transition-transform transform duration-300"
+                        className="bg-slate-900 h-96 rounded-lg cursor-pointer hover:scale-105 transition-transform transform duration-300"
                     >
                         <div className="flex flex-col items-center p-4">
                             <div className={`${fredoka.className} text-slate-100`}>#{tokenId}</div>
                             <Image
                                 loader={() => imageURIURl}
                                 src={imageURIURl}
-                                height="250"
-                                width="250"
+                                height="200"
+                                width="200"
                                 key={tokenId}
                                 alt="NFT Image"
-                                className={`h-${height} w-${width}`}
                             />
                             <div className={`mt-2 text-slate-100 ${fredoka.className}`}>
                                 Type: {petType}

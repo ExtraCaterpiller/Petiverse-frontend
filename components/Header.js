@@ -1,7 +1,10 @@
+'use client'
+
 import { ConnectButton } from "@rainbow-me/rainbowkit"
 import Link from "next/link"
-
+import { useState } from "react"
 import { Fredoka } from "next/font/google"
+import { useRouter } from 'next/navigation'
 
 const fredoka = Fredoka({
     weight: ["500", "700"],
@@ -9,6 +12,9 @@ const fredoka = Fredoka({
 })
 
 export default function Header() {
+    const [tokenId, setTokenId] = useState("")
+    const router = useRouter()
+
     return (
         <nav className={`px-8 flex flex-row text-neutral-400 justify-between items-center header-font ${fredoka.className} backdrop-blur-sm bg-gradient-to-b from-slate-900`}>
             <Link href="/" className="flex flex-row items-center transition-transform transform hover:scale-110 hover:text-neutral-100">
@@ -16,6 +22,15 @@ export default function Header() {
                 <div className=" font-bold text-3xl pl-0.5">Petiverse</div>
             </Link>
             <div className="flex flex-row items-center">
+                <div>
+                    <input
+                        onChange={(e) => setTokenId(e.target.value)}
+                        onKeyUp={(e) => e.key === "Enter" ? router.push(`/${tokenId}`) : null}
+                        type="text"
+                        placeholder="Search by tokenId"
+                        className="border border-slate-500 text-slate-900 rounded-lg text-center mr-4 w-48 h-8 focus:outline-none"
+                    />
+                </div>
                 <Link href="/pets">
                     <div className="mr-4 p-6 text-xl transition-transform transform hover:scale-110 hover:text-neutral-100">Pets</div>
                 </Link>

@@ -43,6 +43,7 @@ export default function Rules() {
                 <p>- If you miss feeding your pet for 3 hours, your pet's health, hydration and happiness will reduce by 1</p>
                 <p>- If you miss your pet's exercise for 24 hours, your pet's health and happiness will reduce by 3</p>
                 <p>- Maximum score of happiness, hydration and health is 100</p>
+                <p className="text-red-500">Note: You can feed and exercise someone else's pet as well if you like, search their NFT tokenId and explore their pet</p>
             </div>
             <div>
                 <div className="flex flex-row justify-center items-center">
