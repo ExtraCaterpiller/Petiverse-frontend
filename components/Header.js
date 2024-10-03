@@ -41,7 +41,7 @@ export default function Header() {
                     <div className="mr-4 p-6 text-xl transition-transform transform hover:scale-110 hover:text-neutral-100">Battle</div>
                 </Link>
                 <Link href="/rules">
-                    <div className="mr-10 p-6 text-xl transition-transform transform hover:scale-110 hover:text-neutral-100">Rules</div>
+                    <div className="mr-10 p-6 text-xl transition-transform transform hover:scale-110 hover:text-neutral-100">Guide</div>
                 </Link>
                 <div className="hover:text-neutral-100">
                     <ConnectButton chainStatus="icon" accountStatus="avatar" />
